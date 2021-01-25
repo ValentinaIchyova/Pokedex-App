@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './component/layout/Dashboard';
 import Pokemon from './component/pokemon/Pokemon';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function App() {

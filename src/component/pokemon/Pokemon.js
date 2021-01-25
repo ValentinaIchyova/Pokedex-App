@@ -88,12 +88,12 @@ export default class Pokemon extends Component {
             }
           });
         
-          // Convert Decimeters to Feet... The + 0.0001 * 100 ) / 100 is for rounding to two decimal places :)
+         
         const height =
-        Math.round((pokemonRes.data.height * 0.328084 + 0.00001) * 100) / 100;
+        Math.round((pokemonRes.data.height * 10));
 
         const weight =
-        Math.round((pokemonRes.data.weight * 0.220462 + 0.00001) * 100) / 100;
+        Math.round((pokemonRes.data.weight / 10));
 
         const types = pokemonRes.data.types.map(type => type.type.name);
 
@@ -382,13 +382,13 @@ export default class Pokemon extends Component {
                       <h6 className="float-right">Height:</h6>
                     </div>
                     <div className="col-6">
-                      <h6 className="float-left">{this.state.height} ft.</h6>
+                      <h6 className="float-left">{this.state.height} sm</h6>
                     </div>
                     <div className="col-6">
                       <h6 className="float-right">Weight:</h6>
                     </div>
                     <div className="col-6">
-                      <h6 className="float-left">{this.state.weight} lbs</h6>
+                      <h6 className="float-left">{this.state.weight} kg</h6>
                     </div>
                     <div className="col-6">
                       <h6 className="float-right">Catch Rate:</h6>
